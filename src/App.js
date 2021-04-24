@@ -71,12 +71,16 @@ function App() {
                     required: "Must enter a phone number",
                     minLength: {
                       value: 8,
-                      message: "Singaporean number must be of 8 digits.",
+                      message: "Singaporean number must be of 8 digits."
                     },
                     maxLength: {
                       value: 8,
-                      message: "Singaporean number must be of 8 digits.",
+                      message: "Singaporean number must be of 8 digits."
                     },
+                    pattern: {
+                      value: /^[0-9]*$/,
+                      message: "Must input numbers"
+                    }
                   })}
                 />
                 {errors.phone && (
